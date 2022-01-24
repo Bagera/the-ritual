@@ -1,0 +1,90 @@
+ritual-map {
+  --dotSize: 3vh;
+  --c-main: black;
+  --c-bg: white;
+  position: relative;
+  display: block;
+  padding: 0.5em;
+  box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+ritual-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+ritual-map p {
+  margin: 0;
+}
+ritual-map ul,
+ritual-map ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ritual-map a {
+  position: absolute;
+  width: 8em;
+  text-align: center;
+  color: transparent;
+  text-decoration: none;
+  border: 0.5em double currentColor;
+  background-color: transparent;
+  pointer-events: none;
+  transform: translate(
+	-50%,
+	calc((100% + 1em + (var(--dotSize) / 2)) * -1)
+  );
+  z-index: 1;
+}
+
+ritual-map a:hover {
+  color: var(--c-main);
+  background-color: var(--c-bg);
+  z-index: 2;
+}
+ritual-map a::before {
+  content: "";
+  position: absolute;
+  pointer-events: initial;
+  left: calc(50% - (var(--dotSize) / 2));
+  top: calc(100% + 1em);
+  width: var(--dotSize);
+  height: var(--dotSize);
+  border-radius: 50%;
+  background: transparent url(../img/map-marker.png) center no-repeat;
+  background-size: contain;
+}
+
+ritual-map .ritual-map-position {
+  position: absolute;
+  width: 8em;
+  text-align: center;
+  color: transparent;
+  text-decoration: none;
+  border: 0.5em double currentColor;
+  background-color: transparent;
+  pointer-events: none;
+  transform: translate(
+	-50%,
+	calc((100% + 1em + (var(--dotSize) / 2)) * -1)
+  );
+  z-index: 3;
+}
+ritual-map .ritual-map-position:hover {
+  color: var(--c-main);
+  background-color: var(--c-bg);
+  z-index: 2;
+}
+ritual-map .ritual-map-position::before {
+  content: "";
+  position: absolute;
+  pointer-events: initial;
+  left: calc(50% - (var(--dotSize) / 2));
+  top: calc(100% + 1em);
+  width: var(--dotSize);
+  height: var(--dotSize);
+  border-radius: 50%;
+  background: transparent url(../img/map-marker-pentagram.png) center no-repeat;
+  background-size: contain;
+}

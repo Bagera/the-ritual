@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Beardsons';
+    src: url('../fonts/beardsonsnormal-yzjgy-webfont.woff2') format('woff2'),
+         url('../fonts/beardsonsnormal-yzjgy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

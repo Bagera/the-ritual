@@ -1,0 +1,67 @@
+ritual-inventory {
+  --size: min(6em, 7vh);
+  transform: translateY(0);
+  transition: opacity 0.25s, transform 0.5s;
+}
+ritual-inventory[hidden] {
+  display: none;
+  opacity: 0;
+}
+ritual-inventory[animation="start"] {
+  transform: translateY(10%);
+  opacity: 0;
+}
+
+ritual-inventory ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ritual-inventory button {
+  background: none;
+  border: none;
+  font-family: var(--f-display);
+}
+
+ritual-inventory button{
+  font-size: 1em;
+  display: block;
+  height: var(--size);
+  width: var(--size);
+  border: none;
+  background: transparent url("../img/circle.png") center no-repeat;
+  background-size: 75% auto;
+  padding: 0;
+}
+ritual-inventory li{
+  opacity: 0.25;
+}
+ritual-inventory li button img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ritual-inventory[dagger] li[data-item="dagger"]{
+  opacity: 1;
+}
+ritual-inventory[chalice] li[data-item="chalice"]{
+  opacity: 1;
+}
+ritual-inventory[coin] li[data-item="coin"]{
+  opacity: 1;
+}
+ritual-inventory[wand] li[data-item="wand"]{
+  opacity: 1;
+}
+ritual-inventory[journal] li[data-item="journal"]{
+  opacity: 1;
+}
+ritual-inventory[key] li[data-item="key"]{
+  opacity: 1;
+}
+ritual-inventory[ritual] li[data-item="ritual"]{
+  opacity: 1;
+}
